@@ -1,8 +1,0 @@
-org.usgs.manifold
-org.usgs.manifold.client
-org.usgs.manifold.database
-org.usgs.manifold.packet
-org.usgs.manifold.packet.data
-org.usgs.manifold.packet.earthworm
-org.usgs.manifold.server
-org.usgs.manifold.utilities
