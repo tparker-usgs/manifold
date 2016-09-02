@@ -115,7 +115,6 @@ public class Initialize {
 
         // Start up the client connections to the moxa to get packets.
         for (int i = 0; i < getGeneralConfig().NETWORK_ID.size(); i++) {
-          System.out.println("TOMP::: connecting to " + generalConfig.IP_ADDRESS.get(i) + ":" + generalConfig.PORT.get(i));
             CVOClient.startClient(generalConfig.IP_ADDRESS.get(i),
                     generalConfig.PORT.get(i), generalConfig.NETWORK_ID.get(i));
         }
