@@ -1,0 +1,53 @@
+<configuration>
+
+  <!-- appenders -->
+<!--  <appender name="GPS" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    <file>gps.log</file>
+    <rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
+      <fileNamePattern>gps.%i.log</fileNamePattern>
+      <minIndex>1</minIndex>
+      <maxIndex>2</maxIndex>
+    </rollingPolicy>
+    <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+      <maxFileSize>5MB</maxFileSize>
+    </triggeringPolicy>
+    <encoder>
+      <pattern>%date %level [%thread] %logger{10} [%file:%line] %msg%n</pattern>
+    </encoder>
+  </appender>-->
+
+  <appender name="CLIENT_STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+      <pattern>[Client] %msg%n</pattern>
+    </encoder>
+  </appender>
+
+  <appender name="SERVER_STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+      <pattern>[Server] %msg%n</pattern>
+    </encoder>
+  </appender>
+
+  <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+      <pattern>%msg%n</pattern>
+    </encoder>
+  </appender>
+
+
+  <!-- loggers -->
+  <logger name="org.usgs.ms.exportmes.client" additivity="false">
+    <appender-ref ref="CLIENT_STDOUT" />
+  </logger>
+
+  <logger name="org.usgs.ms.exportmes.server" additivity="false">
+    <appender-ref ref="SERVER_STDOUT" />
+  </logger>
+
+
+  <!-- root -->
+  <root level="info">
+      <appender-ref ref="STDOUT" />
+  </root>
+
+</configuration>

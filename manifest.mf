@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.9.2
+Created-By: 1.7.0_45-b18 (Oracle Corporation)
+Main-Class: org.usgs.manifold.Initialize
+Class-Path: . lib/netty-3.2.1.Final.jar lib/slf4j-api-1.6.1.jar lib/lo
+ gback-classic-0.9.24.jar lib/logback-core-0.9.24.jar lib/commons-dbut
+ ils-1.3.jar lib/mysql-connector-java-5.1.13-bin.jar lib/config-reader
+ .jar
+
